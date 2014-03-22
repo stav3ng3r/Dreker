@@ -56,6 +56,4 @@ public class PlayerCharacter extends BaseCharacter {
         this.index = index;
     }
     
-    
-    
 }

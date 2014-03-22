@@ -1,4 +1,13 @@
 <playerCharacter id="123">
+   <attributes class="java.util.ArrayList">
+      <attribute>
+         <name>Body</name>
+         <value>2</value>
+         <naturalLimit>6</naturalLimit>
+         <augmentedLimit>9</augmentedLimit>
+      </attribute>
+   </attributes>
+   <npc>false</npc>
    <info>
       <name>Scarlet Red</name>
       <playerName>stav3ng3r</playerName>
