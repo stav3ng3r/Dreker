@@ -14,7 +14,10 @@ import org.simpleframework.xml.Root;
  */
 
 @Root
-public class PlayerCharacter {
+public class PlayerCharacter extends BaseCharacter {
+    @Element(name = "npc")
+    private boolean npc;
+    
     @Element(name = "info")
     private PlayerCharacterInfo pcinfo;
     
@@ -22,6 +25,14 @@ public class PlayerCharacter {
     private int index;
 
     public PlayerCharacter() {
+    }
+
+    public boolean isNpc() {
+        return npc;
+    }
+
+    public void setNpc(boolean npc) {
+        this.npc = npc;
     }
 
     public PlayerCharacter(PlayerCharacterInfo pcinfo, int index) {
