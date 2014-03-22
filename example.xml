@@ -1,0 +1,18 @@
+<playerCharacter id="123">
+   <info>
+      <name>Scarlet Red</name>
+      <playerName>stav3ng3r</playerName>
+      <alias>Fedora</alias>
+      <age>22</age>
+      <sex>Female</sex>
+      <ethnicity>Caucasian</ethnicity>
+      <height>1.6</height>
+      <weight>69</weight>
+      <streetCred>2.0</streetCred>
+      <notoriety>1.0</notoriety>
+      <publicAwareness>1.0</publicAwareness>
+      <karmaLeft>25.0</karmaLeft>
+      <karmaTotal>0.0</karmaTotal>
+      <nuyen>15000.0</nuyen>
+   </info>
+</playerCharacter>
