@@ -1,30 +1,35 @@
 /*
  * Project page https://github.com/stav3ng3r/Dreker
  */
-
 package org.dreker.core;
 
+import java.util.Random;
 import org.simpleframework.xml.Attribute;
 import org.simpleframework.xml.Element;
-import org.simpleframework.xml.Root;
 
 /**
  *
  * @author Stav
  */
 
-@Root
 public class PlayerCharacter extends BaseCharacter {
+
     @Element(name = "npc")
-    private boolean npc;
-    
+    private boolean npc = false;
+
     @Element(name = "info")
     private PlayerCharacterInfo pcinfo;
-    
+
     @Attribute(name = "id")
     private int index;
 
     public PlayerCharacter() {
+    }
+    
+    public PlayerCharacter(CharacterType type){
+        super.setType(type);
+        super.setAttributes(super.getType().setStartingAttributes());
+        this.index = new Random().nextInt(1000)+1;
     }
 
     public boolean isNpc() {
@@ -33,11 +38,6 @@ public class PlayerCharacter extends BaseCharacter {
 
     public void setNpc(boolean npc) {
         this.npc = npc;
-    }
-
-    public PlayerCharacter(PlayerCharacterInfo pcinfo, int index) {
-        this.pcinfo = pcinfo;
-        this.index = index;
     }
 
     public PlayerCharacterInfo getPcinfo() {
@@ -55,5 +55,5 @@ public class PlayerCharacter extends BaseCharacter {
     public void setIndex(int index) {
         this.index = index;
     }
-    
+
 }

@@ -12,17 +12,19 @@ import java.util.List;
 public class Attribute {
 
     private String name;
-    private int value;
-    private int naturalLimit;
-    private int augmentedLimit;
+    private double value;
+    private double base;
+    private double naturalLimit;
+    private double augmentedLimit;
     private List<AttributeModifier> modifiers;
 
     public Attribute() {
     }
 
-    public Attribute(String name, int value, int naturalLimit, int augmentedLimit) {
+    public Attribute(String name, int value, int base, int naturalLimit, int augmentedLimit) {
         this.name = name;
         this.value = value;
+        this.base = base;
         this.naturalLimit = naturalLimit;
         this.augmentedLimit = augmentedLimit;
     }
@@ -35,7 +37,7 @@ public class Attribute {
         this.modifiers = modifiers;
     }
 
-    public int getValue() {
+    public double getValue() {
         return value;
     }
 
@@ -43,15 +45,27 @@ public class Attribute {
         this.value = value;
     }
 
+    public double getBase() {
+        return base;
+    }
+
+    public void setBase(double base) {
+        this.base = base;
+    }
+
     public String getName() {
         return name;
+    }
+    
+    public String getShortName(){
+        return name.substring(0, 4);
     }
 
     public void setName(String name) {
         this.name = name;
     }
 
-    public int getNaturalLimit() {
+    public double getNaturalLimit() {
         return naturalLimit;
     }
 
@@ -59,7 +73,7 @@ public class Attribute {
         this.naturalLimit = naturalLimit;
     }
 
-    public int getAugmentedLimit() {
+    public double getAugmentedLimit() {
         return augmentedLimit;
     }
 

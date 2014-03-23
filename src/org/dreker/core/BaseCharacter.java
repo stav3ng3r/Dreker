@@ -22,8 +22,7 @@ public class BaseCharacter {
     @Element(required = false)
     private CharacterType type;
 
-    public BaseCharacter() {
-        attributes = new ArrayList<>();
+    public BaseCharacter() {       
     }
 
     public List<Attribute> getAttributes() {
@@ -40,6 +39,79 @@ public class BaseCharacter {
 
     public void setType(CharacterType type) {
         this.type = type;
+    }
+    
+    public Attribute getBody(){
+        for (Attribute attribute : attributes) {
+            if(attribute.getName().equals("Body")) return attribute;
+        }
+        return null;
+    }
+    public Attribute getAgility(){
+        for (Attribute attribute : attributes) {
+            if(attribute.getName().equals("Agility")) return attribute;
+        }
+        return null;
+    }
+    public Attribute getReaction(){
+        for (Attribute attribute : attributes) {
+            if(attribute.getName().equals("Reaction")) return attribute;
+        }
+        return null;
+    }
+    public Attribute getStrength(){
+        for (Attribute attribute : attributes) {
+            if(attribute.getName().equals("Strength")) return attribute;
+        }
+        return null;
+    }
+    public Attribute getWillpower(){
+        for (Attribute attribute : attributes) {
+            if(attribute.getName().equals("Willpower")) return attribute;
+        }
+        return null;
+    }
+    public Attribute getLogic(){
+        for (Attribute attribute : attributes) {
+            if(attribute.getName().equals("Logic")) return attribute;
+        }
+        return null;
+    }
+    public Attribute getIntuition(){
+        for (Attribute attribute : attributes) {
+            if(attribute.getName().equals("Intuition")) return attribute;
+        }
+        return null;
+    }
+    public Attribute getCharisma(){
+        for (Attribute attribute : attributes) {
+            if(attribute.getName().equals("Christma")) return attribute;
+        }
+        return null;
+    }
+    public Attribute getEdge(){
+        for (Attribute attribute : attributes) {
+            if(attribute.getName().equals("Edge")) return attribute;
+        }
+        return null;
+    }
+    public Attribute getEssence(){
+        for (Attribute attribute : attributes) {
+            if(attribute.getName().equals("Essence")) return attribute;
+        }
+        return null;
+    }
+    public Attribute getMagic(){
+        for (Attribute attribute : attributes) {
+            if(attribute.getName().equals("Magic")) return attribute;
+        }
+        return null;
+    }
+    public Attribute getResonance(){
+        for (Attribute attribute : attributes) {
+            if(attribute.getName().equals("Resonance")) return attribute;
+        }
+        return null;
     }
 
 }

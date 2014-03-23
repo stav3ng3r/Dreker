@@ -3,27 +3,19 @@
  */
 package org.dreker.core;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *
  * @author Stav
  */
-public class CharacterType {
+public interface CharacterType {
 
-    private String type;
+    public String getTypeName();
 
-    public CharacterType() {
-    }
+    public void setTypeName(String typeName);
 
-    public CharacterType(String type) {
-        this.type = type;
-    }
-
-    public String getType() {
-        return type;
-    }
-
-    public void setType(String type) {
-        this.type = type;
-    }
+    public List<Attribute> setStartingAttributes();
 
 }
